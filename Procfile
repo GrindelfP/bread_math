@@ -1,0 +1,1 @@
+web: gunicorn fanc_web_main:app
