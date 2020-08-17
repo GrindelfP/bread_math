@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from ingredients_calculations import count_ingredients_mass_first, count_ingredients_mass_second
+from utility.ingredients_calculations import count_ingredients_mass_first, count_ingredients_mass_second
 
 app = Flask(__name__)
 
