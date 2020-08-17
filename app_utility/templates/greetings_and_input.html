@@ -13,9 +13,12 @@
 
 <form method='POST' action='/calculate'>
     <table>
-        <tr><td>Масса закваски:</td><td><input name='mass_input' type='number' step="any" required></td></tr>
+        <tr>
+            <th>Масса закваски:</th>
+            <td><input name='mass_input' type='number' step="any" required> граммов </td>
+        </tr>
     </table>
-    <p><input value='Подсчитать!' type='SUBMIT'></p>
+        <p><input value='Подсчитать!' type='SUBMIT'></p>
 </form>
 
 {% endblock %}

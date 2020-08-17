@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h1>
+    Требуемые значения составляющих ингредиентов
+</h1>
+
+<h4>
+    для опары:
+</h4>
+
+<table>
+    <tr>
+        <th> Вода: </th>
+        <td> {{ ingredients_ferment.water.amount }} {{ localize_units(ingredients_ferment.water.unit) }} </td>
+    </tr>
+    <tr>
+        <th> Мука: </th>
+        <td> {{ ingredients_ferment.flour.amount }} {{ localize_units(ingredients_ferment.flour.unit) }} </td>
+    </tr>
+</table>
+
+<h4>
+    для теста:
+</h4>
+
+<table>
+    <tr>
+        <th> Вода: </th>
+        <td> {{ ingredients_dough.water.amount }} {{ localize_units(ingredients_dough.water.unit) }} </td>
+    </tr>
+    <tr>
+        <th> Мука: </th>
+        <td> {{ ingredients_dough.flour.amount }} {{ localize_units(ingredients_dough.flour.unit) }}</td>
+    </tr>
+    <tr>
+        <th> Соль: </th>
+        <td> {{ ingredients_dough.salt.amount }} {{ localize_units(ingredients_dough.salt.unit) }}</td>
+    </tr>
+</table>
+
+<form method='GET' action='/'>
+        <p>
+            <input value='Пересчитать' type='SUBMIT'>
+        </p>
+</form>
+
+{% endblock %}
