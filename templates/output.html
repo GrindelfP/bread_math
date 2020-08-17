@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h1>
+    Требуемые значения составляющих ингредиентов
+</h1>
+
+<h4>
+    для опары:
+</h4>
+
+<table>
+    {% for key, value in ingredients_dict_first.items() %}
+    <tr>
+        <th> {{ key }} </th>
+        <td> {{ value }} </td>
+    </tr>
+    {% endfor %}
+</table>
+
+<h4>
+    для закваски:
+</h4>
+
+<table>
+    {% for key, value in ingredients_dict_second.items() %}
+    <tr>
+        <th> {{ key }} </th>
+        <td> {{ value }} </td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+<div>
+    {{ the_result }}
+</div>
+
+<form method='GET' action='/'>
+        <p>
+            <input value='Пересчитать' type='SUBMIT'>
+        </p>
+</form>
+
+{% endblock %}

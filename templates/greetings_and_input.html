@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h1>
+    Добро пожаловать в BREAD MATH!
+</h1>
+
+<p>
+    Это приложение покажет Вам требуемые значения ингредиентов для Вашего ржаного хлеба, исходя из массы закваски,
+    которую Вы собираетесь использовать.
+</p>
+
+<form method='POST' action='/calculate'>
+    <table>
+        <tr><td>Масса закваски:</td><td><input name='mass_input' type='number' step="any" required></td></tr>
+    </table>
+    <p><input value='Подсчитать!' type='SUBMIT'></p>
+</form>
+
+{% endblock %}
